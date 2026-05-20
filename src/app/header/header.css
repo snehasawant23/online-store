@@ -1,0 +1,189 @@
+/* ==========================================
+   Header Styles - Online Store
+   File: src/app/header/header.css
+========================================== */
+
+/* Navbar container */
+.navbar {
+  background: linear-gradient(135deg, #0d6efd, #0a58ca) !important;
+  padding: 14px 0;
+  box-shadow: 0 8px 24px rgba(13, 110, 253, 0.18);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+}
+
+/* Brand name */
+.navbar-brand {
+  font-size: 1.9rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #ffffff !important;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #ffffff !important;
+  transform: scale(1.03);
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.35);
+}
+
+/* Navigation links */
+.navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.92) !important;
+  font-weight: 600;
+  margin: 0 8px;
+  padding: 8px 12px !important;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.14);
+  transform: translateY(-1px);
+}
+
+/* Animated underline */
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 4px;
+  height: 2px;
+  background: #ffffff;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  transform: scaleX(1);
+}
+
+/* Search box */
+.search-box {
+  max-width: 320px;
+}
+
+.search-box .form-control {
+  border: none;
+  border-radius: 30px 0 0 30px;
+  padding: 10px 16px;
+  box-shadow: none;
+}
+
+.search-box .btn {
+  border-radius: 0 30px 30px 0;
+  font-weight: 600;
+  padding: 10px 18px;
+}
+
+/* Cart button */
+.cart-btn {
+  border-radius: 30px;
+  font-weight: 700;
+  padding: 10px 18px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+}
+
+.cart-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.16);
+}
+
+/* Badge */
+.cart-badge {
+  margin-left: 6px;
+  font-size: 0.75rem;
+  padding: 4px 7px;
+  border-radius: 50px;
+}
+
+/* Navbar toggler */
+.navbar-toggler {
+  border: none;
+  box-shadow: none !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+
+/* Optional announcement bar */
+.top-bar {
+  background: #052c65;
+  color: #ffffff;
+  text-align: center;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .navbar {
+    padding: 12px 0;
+  }
+
+  .navbar-brand {
+    font-size: 1.6rem;
+  }
+
+  .navbar-nav {
+    margin-top: 12px;
+  }
+
+  .search-box {
+    max-width: 100%;
+    margin: 12px 0;
+  }
+
+  .cart-btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.4rem;
+  }
+
+  .navbar-nav .nav-link {
+    margin: 4px 0;
+  }
+
+  .search-box .form-control,
+  .search-box .btn {
+    padding: 9px 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar {
+    padding: 10px 0;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem;
+    letter-spacing: 0.3px;
+  }
+
+  .top-bar {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+
+  .cart-btn {
+    padding: 9px 14px;
+    font-size: 0.95rem;
+  }
+}

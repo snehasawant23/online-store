@@ -1,0 +1,184 @@
+/* ===============================
+   Global App Styles - Online Store
+   File: src/app/app.css
+   =============================== */
+
+/* Page Background */
+:host {
+  display: block;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Section spacing */
+app-header,
+app-product-list,
+app-footer {
+  display: block;
+  width: 100%;
+}
+
+/* Product section container */
+app-product-list {
+  padding: 30px 0;
+}
+
+/* Footer always at bottom */
+app-footer {
+  margin-top: auto;
+}
+
+/* Common heading styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 15px;
+}
+
+/* Paragraph styles */
+p {
+  color: #6c757d;
+  line-height: 1.6;
+}
+
+/* Button transitions */
+button,
+.btn {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+button:hover,
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Card enhancements */
+.card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Product image styles */
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Price text */
+.text-success {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Navbar shadow */
+.navbar {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Footer styling */
+footer {
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Links */
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Utility classes */
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #0d6efd;
+}
+
+.shadow-soft {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.rounded-xl {
+  border-radius: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  app-product-list {
+    padding: 20px 0;
+  }
+
+  .section-title {
+    font-size: 1.9rem;
+  }
+
+  .card img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  :host {
+    background: #f8f9fa;
+  }
+
+  .section-title {
+    font-size: 1.7rem;
+  }
+
+  .card img {
+    height: 180px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  app-product-list {
+    padding: 15px 0;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    border-radius: 12px;
+  }
+
+  .card img {
+    height: 160px;
+  }
+
+  button,
+  .btn {
+    width: 100%;
+  }
+}
